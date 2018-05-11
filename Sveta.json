@@ -729,26 +729,6 @@
         "ownerApartmentList"
       ]
     },
-    "OwnerApartmentList": {
-      "title": "OwnerApartmentList",
-      "example": {
-        "ownerApartment": []
-      },
-      "type": "object",
-      "properties": {
-        "ownerApartment": {
-          "description": "",
-          "example": [],
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": [
-        "ownerApartment"
-      ]
-    },
     "AddOwnerApartmentRequest": {
       "title": "addOwnerApartmentRequest",
       "example": {
