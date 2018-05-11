@@ -283,7 +283,7 @@
         "x-unitTests": [
           {
             "request": {
-              "method": "GET",
+              "method": "GET", 
               "uri": "/owners?token=salajane&cars=yes",
               "headers": {
                 "Content-Type": "application/json"
