@@ -55,7 +55,7 @@
           {
             "name": "rent",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
@@ -262,7 +262,7 @@
           {
             "name": "apartments",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
