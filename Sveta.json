@@ -173,7 +173,7 @@
           "AllowDynamicQueryParameters": false,
           "AllowDynamicFormParameters": false,
           "IsMultiContentStreaming": false
-        }
+        } 
       }
     },
     "/apartments/1": {
