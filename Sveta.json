@@ -125,8 +125,8 @@
             "name": "requestId",
             "in": "query",
             "required": true,
-            "type": "number",
-	    "format": "integer",
+            "type": "integer",
+	    "format": "int32",
             "description": ""
           },
           {
