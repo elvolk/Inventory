@@ -52,6 +52,14 @@
             "format": "int32",
             "description": ""
           },
+			{
+            "name": "rent",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+			
           {
             "name": "Content-Type",
             "in": "header",
@@ -191,7 +199,7 @@
           {
             "name": "apartments",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
