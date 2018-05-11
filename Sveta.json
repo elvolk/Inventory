@@ -263,7 +263,7 @@
           {
             "name": "apartments",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
