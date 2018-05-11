@@ -55,7 +55,7 @@
           {
             "name": "new",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -122,14 +122,6 @@
             "description": ""
           },
           {
-            "name": "requestId",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -156,11 +148,11 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/cars?token=salajane&requestId=3",
+              "uri": "/cars?token=salajane",
               "headers": {
                 "Content-Type": "application/json"
               },
-              "body": "{\"mark\":\"range rover\",\"model\":\"evoque\",\"licencePlate\":\"354MDO\",\"year\":2018,\"bodyType\":\"SUV_MUV\",\"fuel\":\"PETROL\",\"transmission\":\"AUTOMATIC\",\"new\":\"yes\"}"
+              "body": "{\"id\":4,\"mark\":\"range rover\",\"model\":\"evoque\",\"licencePlate\":\"354MDO\",\"year\":2018,\"bodyType\":\"SUV_MUV\",\"fuel\":\"PETROL\",\"transmission\":\"AUTOMATIC\",\"new\":\"yes\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -270,7 +262,7 @@
           {
             "name": "cars",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -292,7 +284,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/owners?token=salajane&cars=no",
+              "uri": "/owners?token=salajane&cars=yes",
               "headers": {
                 "Content-Type": "application/json"
               }
@@ -371,7 +363,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/owners?token=salajane&requestId=2",
+              "uri": "/owners?token=salajane&requestId=3",
               "headers": {
                 "Content-Type": "application/json"
               },
@@ -521,7 +513,7 @@
               "headers": {
                 "Content-Type": "application/json"
               },
-              "body": "{\"carId\":4,\"comment\":\"uus auto\"}"
+              "body": "{\"carId\":3,\"comment\":\"uus auto\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -614,6 +606,7 @@
     "AddCarRequest": {
       "title": "addCarRequest",
       "example": {
+        "id": 4,
         "mark": "range rover",
         "model": "evoque",
         "licencePlate": "354MDO",
@@ -625,6 +618,12 @@
       },
       "type": "object",
       "properties": {
+        "id": {
+          "description": "",
+          "example": 4,
+          "type": "integer",
+          "format": "int32"
+        },
         "mark": {
           "description": "",
           "example": "range rover",
@@ -668,6 +667,7 @@
         }
       },
       "required": [
+        "id",
         "mark",
         "model",
         "licencePlate",
@@ -713,14 +713,14 @@
     "AddCarOwnerRequest": {
       "title": "addCarOwnerRequest",
       "example": {
-        "carId": 4,
+        "carId": 3,
         "comment": "uus auto"
       },
       "type": "object",
       "properties": {
         "carId": {
           "description": "",
-          "example": 4,
+          "example": 3,
           "type": "integer",
           "format": "int32"
         },
