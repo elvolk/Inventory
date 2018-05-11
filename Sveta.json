@@ -121,6 +121,14 @@
             "type": "string",
             "description": ""
           },
+			{
+            "name": "requestId",
+            "in": "query",
+            "required": true,
+            "type": "number",
+			"format": "integer",
+            "description": ""
+          },
           {
             "name": "Body",
             "in": "body",
