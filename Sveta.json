@@ -126,7 +126,7 @@
             "in": "query",
             "required": true,
             "type": "number",
-			"format": "integer",
+	    "format": "integer",
             "description": ""
           },
           {
