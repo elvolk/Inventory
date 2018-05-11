@@ -122,6 +122,14 @@
             "description": ""
           },
           {
+            "name": "requestId",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -148,11 +156,11 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/cars?token=salajane",
+              "uri": "/cars?token=salajane&requestId=2555566558965",
               "headers": {
                 "Content-Type": "application/json"
               },
-              "body": "{\"id\":4,\"mark\":\"range rover\",\"model\":\"evoque\",\"licencePlate\":\"354MDO\",\"year\":2018,\"bodyType\":\"SUV_MUV\",\"fuel\":\"PETROL\",\"transmission\":\"AUTOMATIC\",\"new\":\"yes\"}"
+              "body": "{\"mark\":\"range rover\",\"model\":\"audi\",\"licencePlate\":\"354MDO\",\"year\":2018,\"bodyType\":\"COUPE\",\"fuel\":\"PETROL\",\"transmission\":\"AUTOMATIC\",\"new\":\"yes\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -283,7 +291,7 @@
         "x-unitTests": [
           {
             "request": {
-              "method": "GET", 
+              "method": "GET",
               "uri": "/owners?token=salajane&cars=yes",
               "headers": {
                 "Content-Type": "application/json"
@@ -606,24 +614,17 @@
     "AddCarRequest": {
       "title": "addCarRequest",
       "example": {
-        "id": 4,
         "mark": "range rover",
-        "model": "evoque",
+        "model": "audi",
         "licencePlate": "354MDO",
         "year": 2018,
-        "bodyType": "SUV_MUV",
+        "bodyType": "COUPE",
         "fuel": "PETROL",
         "transmission": "AUTOMATIC",
         "new": "yes"
       },
       "type": "object",
       "properties": {
-        "id": {
-          "description": "",
-          "example": 4,
-          "type": "integer",
-          "format": "int32"
-        },
         "mark": {
           "description": "",
           "example": "range rover",
@@ -631,7 +632,7 @@
         },
         "model": {
           "description": "",
-          "example": "evoque",
+          "example": "audi",
           "type": "string"
         },
         "licencePlate": {
@@ -647,7 +648,7 @@
         },
         "bodyType": {
           "description": "",
-          "example": "SUV_MUV",
+          "example": "COUPE",
           "type": "string"
         },
         "fuel": {
@@ -667,7 +668,6 @@
         }
       },
       "required": [
-        "id",
         "mark",
         "model",
         "licencePlate",
