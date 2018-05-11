@@ -55,7 +55,7 @@
           {
             "name": "new",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
@@ -262,7 +262,7 @@
           {
             "name": "cars",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
