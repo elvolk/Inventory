@@ -55,7 +55,7 @@
           {
             "name": "new",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": ""
           },
@@ -663,7 +663,6 @@
         },
         "new": {
           "description": "",
-		  "required":false,
           "example": "yes",
           "type": "string"
         }
